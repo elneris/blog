@@ -96,14 +96,8 @@ class BlogController extends AbstractController
             throw $this->createNotFoundException('No found article with ' .$categoryName.' found in article\'s table');
         }
 
-        $articles = $this->getDoctrine()
-            ->getRepository(Article::class)
-            ->findBy(
-                ['category' => $category->getId()],
-                ['id' => 'DESC'],
-                3,
-                0
-            );
+        $articles = $category->getArticles();
+
         return $this->render( 'Blog/category.html.twig', [
             'articles' => $articles,
             'name' => $categoryName
