@@ -91,6 +91,11 @@ class BlogController extends AbstractController
         $category = $this->getDoctrine()
             ->getRepository(Category::class)
             ->findOneBy(['name' => $categoryName]);
+
+        if (!$category) {
+            throw $this->createNotFoundException('No found article with ' .$categoryName.' found in article\'s table');
+        }
+
         $articles = $this->getDoctrine()
             ->getRepository(Article::class)
             ->findBy(
