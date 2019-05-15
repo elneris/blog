@@ -42,3 +42,11 @@
     - Lance la commande doctrine:schema:validate, le résultat affiche bien OK pour le mapping ET la base de données.
     - Ton code devra être disponible sur un repository GitHub.
 
+### Critères de validation : Relation Many To One avec Doctrine
+
+    La propriété category est présente et privée.
+    Le getter et setter correspondants sont présents et publics.
+    Les annotations ManyToOne et JoinColumn sont présentes et correctement paramétrées (nullable=false, targetEntity)
+    Le use nécessaire pour les annotations @ORM est en place.
+    Ton code devra être disponible sur un repository GitHub
+
