@@ -2,6 +2,12 @@
 
 ## Quêtes réalisées lors de ma formation à la Wild Code School Février 2019
 
+### Critères de validation : Initiation au module Webpack Encore
+
+    Symfony Encore est bien intégré dans le projet.
+    Bootstrap et JQuery sont bien chargés dans tes pages (regarde les sources HTML).
+    La navbar de Bootstrap s'affiche correctement sur tes pages
+
 ### Critères de validation : Initialiser un projet Blog
 
     - Le dépôt contient uniquement les dossiers suivants : assets/, bin/, config/, public/, src/, templates/, tests/, translations/, var/ et quelques autres fichiers (.gitignore, composer.json, etc.).
@@ -59,3 +65,21 @@
     - Ce fichier bouclera sur tous les articles afin d'afficher l'id, le titre et le contenu de chaque itération.
     - L'URL http://localhost:8000/blog/category/javascript est fonctionnelle et renvoie bien tous les articles liés à la catégorie Javascript, ajoutée en début de quête.
     - Ton code devra être disponible sur un repository GitHub
+    
+### Critères de validation : Les relations bidirectionnelles avec Doctrine
+
+    Rendre la quête avec un repository GitHub
+    Avoir les deux classes Article et Category
+    Les annotations inversedBy et mappedBy sont présentes
+    Les méthodes addArticle() et removeArticle() sont présentes dans la classe Category
+    Utiliser les méthodes getArticles() et getCategory()
+
+
+
+### Critères de validation : Le param Converter
+
+        Dans blogController, la méthode showByCategory() permet de récupérer un objet Category via le param converter, à partir d'un name en paramètre de route,
+    Dans showByCategory(), les articles associés à la categorie sont toujours récupérés par l’appel à $category->getArticles();,
+    La méthode rend une vue affichant le nom de la catégorie et ses articles associés.
+
+
