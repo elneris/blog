@@ -1,17 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ name }}{% endblock %}
-
 
 {% block body %}
 
+    <h1>{{ categories.name }}</h1>
     {% for article in articles %}
-    <div>
-        <h1>Article id : {{ article.id }}</h1>
-        <h2>Titre : {{ article.title }}</h2>
-        <p>{{ article.content }}</p>
-    </div>
+        <div>
+            <h2>{{ article.id }} / {{ article.title }} - Category : {{ article.category.name }}</h2>
+            <p>{{ article.content }}</p>
+        </div>
+
     {% endfor %}
+
     <a href="{{ path('app_index') }}">
         Back to homepage.
     </a>
