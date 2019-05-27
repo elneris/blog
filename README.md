@@ -110,12 +110,7 @@
 
 ### Critères de validation : Entity Type
 
-    Le formulaire d’ajout d’un article affiche un champ tags (EntityType),
-    Ce champ apparaît sous la forme de cases à cocher.
-    Lorsque l’on ajoute un tag à un article, celui-ci est bien relié à l’article en BDD.
-    Le tag s’affiche sur la page de l’article.
-
-
-
-
-
+    - Le formulaire d’ajout d’un article affiche un champ tags (EntityType),
+    - Ce champ apparaît sous la forme de cases à cocher.
+    - Lorsque l’on ajoute un tag à un article, celui-ci est bien relié à l’article en BDD.
+    - Le tag s’affiche sur la page de l’article.
