@@ -89,7 +89,7 @@
     - Le formulaire fonctionne (il crée une catégorie).
     - Ton code est présent sur le même dépot github que tes précédentes quêtes Symfony.
     
-#### Critères de validation
+### Critères de validation
 
     Le CRUD est généré pour l’entité Article.
     L’entité Article dispose des actions de lecture, écriture et suppression.
