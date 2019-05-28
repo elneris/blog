@@ -122,5 +122,21 @@
     - Les noms des catégories sont définis "à la main" dans la classe App\DataFixtures\CategoryFixtures,
     - Les titres et contenus des articles sont générés (et en minuscules) aléatoirement grâce à la librairie Faker dans la classe App\DataFixtures\ArticleFixtures,
     - Ton travail est disponible sur un dépot GitHub.
+    
+### Critères de validation : Introduction aux “Services”
+
+    - Le service est appelé à chaque niveau de l’application où il y a un ajout/modification d'article.
+    - Le service Slugify créé auparavant avec une méthode generate(), permet de générer un slug à partir d'une chaîne de caractères.
+    - L'ajout de l'article : "PHPStorm, l'éditeur de code pour PHP à tester !" donne le slug "phpstorm-lediteur-de-code-pour-php-a-tester".
+    - Le changement du titre de l'article précédent en "PHPStorm, l'éditeur de code pour PHP idéal !" donne "phpstorm-lediteur-de-code-pour-php-ideal".
+
+### Critères de validation : Envoi d’e-mail
+
+    - Le mail du destinataire (administrateur) est issue d'une variable d'environnement,
+    - Le contenu des mails envoyés reprend l'apparence générale de l'application, à l'aide d'un layout de mail général et se trouve dans une vue Twig, exemple : templates/Article/email/notification.html.twig.
+    - Le contenu du mail indique le titre du nouvel article publié, ainsi qu'un lien vers le nouvel article.
+    - Ton code est disponible sur un dépot GitHub.
+
+
 
 
