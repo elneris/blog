@@ -137,6 +137,13 @@
     - Le contenu du mail indique le titre du nouvel article publié, ainsi qu'un lien vers le nouvel article.
     - Ton code est disponible sur un dépot GitHub.
 
+### Critères de validation : Gestion des utilisateurs
+
+    - le formulaire de login est fonctionnel,
+    - le lien de déconnexion est fonctionnel,
+    - lorsque tu crées un article, l’auteur actuellement connecté est bien associé en base de données à l’article,
+    - le dépôt est disponible sur github.
+
 
 
 
