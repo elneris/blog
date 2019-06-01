@@ -1,0 +1,15 @@
+{% extends 'article/email/layout.html.twig' %}
+
+{% block body %}
+    <h1>
+        Ajout d'un article
+    </h1>
+    <p>Envoyé par : {{ name }}</p>
+    <br>
+    Titre de l'article : {{ article.title }}
+    <br>
+    <br>
+   <br>
+    <a href="{{ url('article_show', {'id': article.id} )  }}">lien vers l'article</a>
+
+{% endblock %}
