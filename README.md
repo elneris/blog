@@ -2,11 +2,13 @@
 
 ## Quêtes réalisées lors de ma formation à la Wild Code School Février 2019
 
+    - Tu pourras trouver chaque quêtes dans une branche spécifique 
+
 ### Critères de validation : Initiation au module Webpack Encore
 
-    Symfony Encore est bien intégré dans le projet.
-    Bootstrap et JQuery sont bien chargés dans tes pages (regarde les sources HTML).
-    La navbar de Bootstrap s'affiche correctement sur tes pages
+    - Symfony Encore est bien intégré dans le projet.
+      Bootstrap et JQuery sont bien chargés dans tes pages (regarde les sources HTML).
+    - La navbar de Bootstrap s'affiche correctement sur tes pages
 
 ### Critères de validation : Initialiser un projet Blog
 
@@ -144,6 +146,17 @@
     - lorsque tu crées un article, l’auteur actuellement connecté est bien associé en base de données à l’article,
     - le dépôt est disponible sur github.
 
+### Critères de validation : Sécurisons nos routes.
 
+    - Le fichier security.yaml est configuré correctement avec une gestion de la hiérarchie et des chemins sécurisés.
+    - Un utilisateur reconnu comme "anonymous" ne peut accéder qu'au listing des articles.
+    - Un utilisateur reconnu comme "auteur" peut accéder au CRUD des articles, mais ne peut pas modifier un article dont il n'est pas l'auteur.
+    - Un utilisateur reconnu comme "administrateur" peut accéder à l'ensemble du site, dont la modification de tous les articles, la création de catégories, ainsi que des tags.
 
+### Critères de validation : Validation
 
+    - Pour tester les cas d’erreur côté serveur, il faut enlever les attributs bloquants dans le HTML du formulaire (les maxLength et autre required) afin de “forcer” l’erreur. Utilise la console du navigateur pour faire cela ;-)
+    - Une erreur appropriée apparaît au niveau de ton formulaire si un titre vide ou un titre > 255 caractères est envoyé au serveur.
+    - Le message “ce titre existe déjà” doit apparaître dans ton formulaire, si le titre saisi existe déjà pour un autre article
+    - Une erreur appropriée apparaît au niveau de ton formulaire si un contenu d’article vide est envoyé au serveur.
+    - Si le content de l’article contient le mot “digital”, le message d’erreur “en français, il faut dire numérique” apparaît à la place.
