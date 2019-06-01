@@ -87,6 +87,7 @@ class ArticleController extends AbstractController
      */
     public function edit(Request $request, Article $article, Slugify $slugify): Response
     {
+        $this->denyAccessUnlessGranted('EDIT',$article);
         $form = $this->createForm(ArticleType::class, $article);
         $form->handleRequest($request);
 
