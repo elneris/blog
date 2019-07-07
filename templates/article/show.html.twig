@@ -25,11 +25,13 @@
     <strong>Tags :</strong>
     <ul>
         {% for tag in article.tags %}
-            <a href="{{ path('tag_show', {'id': tag.id}) }}"><li>{{ tag.name }} </li></a>
+            <a href="{{ path('tag_show', {'id': tag.id, 'name': tag.name}) }}"><li>{{ tag.name }} </li></a>
         {% else %}
             <li>No tags for this article</li>
         {% endfor %}
     </ul>
+
+    <a onclick="addToFavorite()">{{ isFavorite ? '<i id="favorite" class="fas fa-heart"></i>' : '<i id="favorite" class="far fa-heart"></i>' }}</a>
 
     <a href="{{ path('article_index') }}">back to list</a>
 
@@ -37,4 +39,23 @@
         <a href="{{ path('article_edit', {'id': article.id}) }}">edit</a>
     {% endif %}
     {{ include('article/_delete_form.html.twig') }}
+    <script>
+        function addToFavorite() {
+            fetch('{{ path('article_favorite', {'id': article.id}) }}')
+                .then(response => response.json())
+                .then(json => {
+                    let favoriteElt = document.getElementById('favorite');
+                    if (json.isFavorite) {
+                        favoriteElt.classList.remove('far');
+                        favoriteElt.classList.add('fas');
+                    }
+                    else {
+                        favoriteElt.classList.remove('fas');
+                        favoriteElt.classList.add('far');
+                    }
+                });
+        }
+    </script>
 {% endblock %}
+
+
