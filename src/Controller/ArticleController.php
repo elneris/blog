@@ -59,6 +59,12 @@ class ArticleController extends AbstractController
                 )
             ;
                 $mailer->send($message);
+
+            $this->addFlash(
+                'success',
+                'Action bien executé'
+            );
+
             return $this->redirectToRoute('article_index');
         }
 
@@ -95,6 +101,12 @@ class ArticleController extends AbstractController
             $article->setSlug($slugify->generate($article->getTitle()));
             $this->getDoctrine()->getManager()->flush();
 
+
+            $this->addFlash(
+                'success',
+                'Action bien executé'
+            );
+
             return $this->redirectToRoute('article_index', [
                 'id' => $article->getId(),
             ]);
@@ -117,6 +129,11 @@ class ArticleController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($article);
             $entityManager->flush();
+
+            $this->addFlash(
+                'danger',
+                'Action bien executé'
+            );
         }
 
         return $this->redirectToRoute('article_index');
