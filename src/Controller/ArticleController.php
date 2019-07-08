@@ -15,7 +15,11 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/article")
+ * @Route({
+ *     "fr": "/article",
+ *     "en": "/article",
+ *     "es": "/articulo",
+ * })
  */
 class ArticleController extends AbstractController
 {
@@ -30,7 +34,11 @@ class ArticleController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="article_new", methods={"GET","POST"})
+     * @Route({
+     *     "fr": "/ajout",
+     *     "en": "/new",
+     *     "es": "/nuevo"
+     * }, name="article_new", methods={"GET","POST"})
      * @param Request $request
      * @param Slugify $slugify
      * @return Response
@@ -89,7 +97,11 @@ class ArticleController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="article_edit", methods={"GET","POST"})
+     * @Route({
+     *     "fr": "/{id}/editer",
+     *     "en": "/{id}/edit",
+     *     "es": "/{id}/editar"
+     * }, name="article_edit", methods={"GET","POST"})
      * @param Request $request
      * @param Article $article
      * @param Slugify $slugify

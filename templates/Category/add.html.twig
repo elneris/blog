@@ -1,15 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Add Category{% endblock %}
+{% block title %}{{ 'category.new' | trans }}{% endblock %}
 
 {% block body %}
-    <h1>Add Category : </h1>
+    <h1>{{ 'category.new' | trans }}</h1>
 
     {{ form_start(form) }}
     {{ form_row(form.name) }}
-    <button class="btn">{{  button_label|default('Save') }}</button>
+    <button class="btn">{{  button_label|default('save') }}</button>
     {{ form_end(form) }}
     <a href="{{ path('app_index') }}">
-        Back to homepage.
+        {{ 'back' | trans }}
     </a>
 {% endblock %}

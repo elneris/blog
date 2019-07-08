@@ -26,7 +26,11 @@ class TagController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="tag_new", methods={"GET","POST"})
+     * @Route({
+     *     "fr": "/ajout",
+     *     "en": "/new",
+     *     "es": "/nuevo"
+     * }, name="tag_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -64,7 +68,11 @@ class TagController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="tag_edit", methods={"GET","POST"})
+     * @Route({
+     *     "fr": "/{id}/editer",
+     *     "en": "/{id}/edit",
+     *     "es": "/{id}/editar"
+     * }, name="tag_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Tag $tag): Response
     {

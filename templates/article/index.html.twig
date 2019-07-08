@@ -1,19 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Article index{% endblock %}
+{% block title %}{{ 'article.index' | trans }}{% endblock %}
 
 {% block body %}
-    <h1>Article index</h1>
+    <h1>{{ 'article.index' | trans }}</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Title</th>
-                <th>Content</th>
-                <th>Category</th>
+                <th>{{ 'article.title' | trans }}</th>
+                <th>{{ 'article.content' | trans }}</th>
+                <th>{{ 'article.category' | trans }}</th>
                 <th>Tag</th>
-                <th>actions</th>
+                <th>{{ 'article.action' | trans }}</th>
             </tr>
         </thead>
         <tbody>
@@ -29,19 +29,19 @@
                     {% endfor %}
                 </td>
                 <td>
-                    <a href="{{ path('article_show', {'id': article.id}) }}">show</a>
+                    <a href="{{ path('article_show', {'id': article.id}) }}">{{ 'article.show' | trans }}</a>
                 {% if is_granted('EDIT', article) %}
-                    <a href="{{ path('article_edit', {'id': article.id}) }}">edit</a>
+                    <a href="{{ path('article_edit', {'id': article.id}) }}">{{ 'article.edit' | trans }}</a>
                 {% endif %}
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="4">no records found</td>
+                <td colspan="4">{{ 'article.no.data' | trans }}</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('article_new') }}">Create new</a>
+    <a href="{{ path('article_new') }}">{{ 'article.new' | trans }}</a>
 {% endblock %}
