@@ -26,7 +26,11 @@ class TagController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="tag_new", methods={"GET","POST"})
+     * @Route({
+     *     "fr": "/ajout",
+     *     "en": "/new",
+     *     "es": "/nuevo"
+     * }, name="tag_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -38,6 +42,11 @@ class TagController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($tag);
             $entityManager->flush();
+
+            $this->addFlash(
+                'success',
+                'Action bien executé'
+            );
 
             return $this->redirectToRoute('tag_index');
         }
@@ -59,7 +68,11 @@ class TagController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="tag_edit", methods={"GET","POST"})
+     * @Route({
+     *     "fr": "/{id}/editer",
+     *     "en": "/{id}/edit",
+     *     "es": "/{id}/editar"
+     * }, name="tag_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Tag $tag): Response
     {
@@ -68,6 +81,11 @@ class TagController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+
+            $this->addFlash(
+                'success',
+                'Action bien executé'
+            );
 
             return $this->redirectToRoute('tag_index', [
                 'id' => $tag->getId(),
@@ -89,6 +107,11 @@ class TagController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($tag);
             $entityManager->flush();
+
+            $this->addFlash(
+                'danger',
+                'Action bien executé'
+            );
         }
 
         return $this->redirectToRoute('tag_index');

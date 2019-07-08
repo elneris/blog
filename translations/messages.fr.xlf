@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="LPJNul_" resname="hello">
+        <source>hello</source>
+        <target>Bonjour</target>
+      </trans-unit>
+      <trans-unit id="E_t5j6Q" resname="account.login">
+        <source>account.login</source>
+        <target>Se Connecter</target>
+      </trans-unit>
+      <trans-unit id="Q7UTU9q" resname="account.logout">
+        <source>account.logout</source>
+        <target>Se Deconnecter</target>
+      </trans-unit>
+      <trans-unit id="CDjx2ju" resname="hello_username">
+        <source>hello_username</source>
+        <target>Bonjour %username%</target>
+      </trans-unit>
+      <trans-unit id="ealuUJh" resname="edit.article">
+        <source>edit.article</source>
+        <target>Editer</target>
+      </trans-unit>
+      <trans-unit id="PEgjRvN" resname="back">
+        <source>back</source>
+        <target>Retour</target>
+      </trans-unit>
+      <trans-unit id="rczX7KV" resname="article.index">
+        <source>article.index</source>
+        <target>Page Articles</target>
+      </trans-unit>
+      <trans-unit id="Iasdgr0" resname="article.title">
+        <source>article.title</source>
+        <target>Titre</target>
+      </trans-unit>
+      <trans-unit id="F1o8xft" resname="article.content">
+        <source>article.content</source>
+        <target>Contenu</target>
+      </trans-unit>
+      <trans-unit id="q0QOZnS" resname="article.category">
+        <source>article.category</source>
+        <target>Categorie</target>
+      </trans-unit>
+      <trans-unit id="yC_VstH" resname="article.action">
+        <source>article.action</source>
+        <target>Action</target>
+      </trans-unit>
+      <trans-unit id="1kNN5ZC" resname="article.show">
+        <source>article.show</source>
+        <target>Article</target>
+      </trans-unit>
+      <trans-unit id="W12cLaV" resname="article.edit">
+        <source>article.edit</source>
+        <target>Editer</target>
+      </trans-unit>
+      <trans-unit id="mGYWx7O" resname="article.no.data">
+        <source>article.no.data</source>
+        <target>Aucun article</target>
+      </trans-unit>
+      <trans-unit id="oJSxGvL" resname="article.new">
+        <source>article.new</source>
+        <target>Nouvel Article</target>
+      </trans-unit>
+      <trans-unit id="hDk63Yx" resname="article">
+        <source>article</source>
+        <target>Article</target>
+      </trans-unit>
+      <trans-unit id="YZdZVQP" resname="delete">
+        <source>delete</source>
+        <target>Supprimer</target>
+      </trans-unit>
+      <trans-unit id="AT4wfK_" resname="category.new">
+        <source>category.new</source>
+        <target>Nouvelle Catégorie</target>
+      </trans-unit>
+      <trans-unit id="JtHE36V" resname="my.blog">
+        <source>my.blog</source>
+        <target>Mon petit blog</target>
+      </trans-unit>
+      <trans-unit id="TqFAWIF" resname="home">
+        <source>home</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="foGmrel" resname="sign.in">
+        <source>sign.in</source>
+        <target>Se connecter</target>
+      </trans-unit>
+      <trans-unit id="ANjT8Rc" resname="mail">
+        <source>mail</source>
+        <target>mail</target>
+      </trans-unit>
+      <trans-unit id="XohImNo" resname="password">
+        <source>password</source>
+        <target>Mot de passe</target>
+      </trans-unit>
+      <trans-unit id="amj1wO2" resname="langue">
+        <source>langue</source>
+        <target>Langue</target>
+      </trans-unit>
+      <trans-unit id="tiNNLqD" resname="english">
+        <source>english</source>
+        <target>Anglais</target>
+      </trans-unit>
+      <trans-unit id="Ibs2rQY" resname="french">
+        <source>french</source>
+        <target>Francais</target>
+      </trans-unit>
+      <trans-unit id="nJsTRGz" resname="spanish">
+        <source>spanish</source>
+        <target>Espagnol</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

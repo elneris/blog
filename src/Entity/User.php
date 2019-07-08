@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -32,6 +34,16 @@ class User implements UserInterface
      * @ORM\Column(type="string")
      */
     private $password;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Article")
+     */
+    private $favori;
+
+    public function __construct()
+    {
+        $this->favori = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -109,5 +121,45 @@ class User implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    /**
+     * @return Collection|Article[]
+     */
+    public function getFavori(): Collection
+    {
+        return $this->favori;
+    }
+
+    public function addFavori(Article $favori): self
+    {
+        if (!$this->favori->contains($favori)) {
+            $this->favori[] = $favori;
+        }
+
+        return $this;
+    }
+
+    public function removeFavori(Article $favori): self
+    {
+        if ($this->favori->contains($favori)) {
+            $this->favori->removeElement($favori);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param Article $article
+     * @return bool
+     */
+    public function isFavorite( Article $article): bool
+    {
+        if ($this->favori->contains($article)) {
+            $favorite = true;
+        }else{
+            $favorite = false;
+        }
+        return $favorite;
     }
 }
